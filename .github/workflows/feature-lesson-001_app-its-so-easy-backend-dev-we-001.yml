@@ -31,11 +31,13 @@ jobs:
       - name: Archive artifact
         run: Compress-Archive -Path ./001/backend -Destination release.zip
 
+      - run: dir
+
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
           name: node-app
-          path: ./release.zip
+          path: release.zip
 
   deploy:
     runs-on: ubuntu-latest
@@ -49,6 +51,8 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: node-app
+
+      - run: dir
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
