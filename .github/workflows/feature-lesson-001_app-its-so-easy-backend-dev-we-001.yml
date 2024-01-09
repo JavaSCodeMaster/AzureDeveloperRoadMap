@@ -54,4 +54,4 @@ jobs:
           app-name: 'app-its-so-easy-backend-dev-we-001'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C1886AD2FD7F4D4F8C2ED183586C09F1 }}
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_da1d3ae8af7d4df59b53467b3e6372e4 }}
